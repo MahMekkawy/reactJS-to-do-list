@@ -9,6 +9,7 @@ import { green, purple } from "@mui/material/colors";
 import MySnackBar from "./components/MySnackBar";
 import { SnackbarProvider } from "notistack";
 import Slide from "@mui/material/Slide";
+import TodosProvider from "./contexts/TodosContext";
 
 const initialTodos = [
   {
@@ -52,32 +53,32 @@ function App() {
   // });
 
   return (
-    <SnackbarProvider
-      maxSnack={3} // max number of snackbars at once
-      anchorOrigin={{ vertical: "bottom", horizontal: "left" }} // bottom-right
-      autoHideDuration={3000} // auto hide after 3s
-      TransitionComponent={(props) => <Slide {...props} direction="right" />} // Slide up transition
-    >
-      <div
-        className="App"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "100vh",
-          background: "lightGray",
-        }}
+    <TodosProvider>
+      <SnackbarProvider
+        maxSnack={3} // max number of snackbars at once
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }} // bottom-right
+        autoHideDuration={3000} // auto hide after 3s
+        TransitionComponent={(props) => <Slide {...props} direction="right" />} // Slide up transition
       >
-        {/* <MySnackBar /> */}
-        {/* Another way to use snack bar */}
+        <div
+          className="App"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100vh",
+            background: "lightGray",
+          }}
+        >
+          {/* <MySnackBar /> */}
+          {/* Another way to use snack bar */}
 
-        <ThemeProvider theme={theme}>
-          <TodosContext.Provider value={{ todos, setTodos }}>
+          <ThemeProvider theme={theme}>
             <TodoList />
-          </TodosContext.Provider>
-        </ThemeProvider>
-      </div>
-    </SnackbarProvider>
+          </ThemeProvider>
+        </div>
+      </SnackbarProvider>
+    </TodosProvider>
   );
 }
 

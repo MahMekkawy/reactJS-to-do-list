@@ -13,12 +13,10 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 // Hooks
-import { useContext, useState } from "react";
-import { TodosContext } from "../contexts/TodosContext";
-import { ToastContext } from "../contexts/ToastContext";
+import { useTodos } from "../contexts/TodosContext";
 
 export default function Todo({ todo, openDeleteDialog, openUpdateDialog }) {
-  const { todos, setTodos } = useContext(TodosContext);
+  const { todos, dispatch } = useTodos();
 
   // Another Way to use snack bar
   // const { setOpenCloseToast } = useContext(ToastContext);
@@ -27,22 +25,12 @@ export default function Todo({ todo, openDeleteDialog, openUpdateDialog }) {
 
   // Event Handlers
   function handleCheckButton() {
-    const newTodos = todos.map((t) => {
-      if (t.id == todo.id) {
-        t.isCompleted = !t.isCompleted;
-      }
-
-      return t;
-    });
-
-    setTodos(newTodos);
-
-    localStorage.setItem("todos", JSON.stringify(newTodos));
+    dispatch({ type: "complete", payload: todo });
 
     enqueueSnackbar(
       todo.isCompleted
-        ? "Task completed successfully 🎉"
-        : "Task marked as incomplete",
+        ? "Task marked as incomplete"
+        : "Task completed successfully 🎉",
       { variant: "success" }
     );
 

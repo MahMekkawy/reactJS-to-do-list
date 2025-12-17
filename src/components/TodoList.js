@@ -13,12 +13,9 @@ import TextField from "@mui/material/TextField";
 import Grid from "@mui/material/Grid";
 import { useSnackbar } from "notistack";
 
-// Libraries
-import { v4 as uuidv4 } from "uuid";
-
 // Hooks
-import { useState, useContext, useEffect, useMemo } from "react";
-import { TodosContext } from "../contexts/TodosContext";
+import { useState, useEffect, useMemo } from "react";
+import { useTodos } from "../contexts/TodosContext";
 import { ToastContext } from "../contexts/ToastContext";
 
 // Delete Dialog
@@ -27,6 +24,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
+import { type } from "@testing-library/user-event/dist/type";
 
 // Toggle Buttons
 const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
@@ -53,13 +51,13 @@ const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
 export default function TodoList() {
   const [titleInput, setTitleInput] = useState("");
 
-  const { todos, setTodos } = useContext(TodosContext);
-
   // const { setOpenCloseToast } = useContext(ToastContext);
 
   const [displayedTasksType, setDisplayedTasksType] = useState("all");
 
   const { enqueueSnackbar } = useSnackbar();
+
+  const { todos, dispatch } = useTodos();
 
   // Toggle Buttons
 
@@ -69,19 +67,7 @@ export default function TodoList() {
 
   // Start Add Button
   function handleAddButtom() {
-    const newDetails = prompt("Task Details: ");
-
-    const newTask = {
-      id: uuidv4(),
-      title: titleInput,
-      details: newDetails,
-      isCompleted: false,
-    };
-
-    const storageTodos = [...todos, newTask];
-    setTodos(storageTodos);
-
-    localStorage.setItem("todos", JSON.stringify(storageTodos));
+    dispatch({ type: "add", paylod: { title: titleInput } });
 
     setTitleInput("");
 
@@ -98,8 +84,7 @@ export default function TodoList() {
 
   // Get Tasks From Local Storage
   useEffect(() => {
-    const todosStorage = JSON.parse(localStorage.getItem("todos")) ?? [];
-    setTodos(todosStorage);
+    dispatch({ type: "storage" });
   }, []);
 
   // Delete Dialog
@@ -116,11 +101,8 @@ export default function TodoList() {
   }
 
   function handleDelete() {
-    const updatedTodos = todos.filter((t) => {
-      return t.id != targetedTodo.id;
-    });
-    setTodos(updatedTodos);
-    localStorage.setItem("todos", JSON.stringify(updatedTodos));
+    dispatch({ type: "delete", paylod: targetedTodo });
+
     setHandleDeleteDialog(false);
 
     enqueueSnackbar("Task deleted ❌", { variant: "error" });
@@ -147,20 +129,8 @@ export default function TodoList() {
   }
 
   function handleUpdate() {
-    const editedTodo = todos.map((t) => {
-      if (t.id == targetedTodo.id) {
-        return {
-          ...targetedTodo,
-          title: targetedTodo.title,
-          details: targetedTodo.details,
-        };
-      } else {
-        return t;
-      }
-    });
+    dispatch({ type: "update", paylod: targetedTodo });
 
-    setTodos(editedTodo);
-    localStorage.setItem("todos", JSON.stringify(editedTodo));
     setHandleUpdateDialog(false);
     enqueueSnackbar("Task updated ✏️", { variant: "info" });
 
