@@ -10,7 +10,7 @@ https://react-to-do-list96.netlify.app/
 
 ---
 
-🚀 Features
+## 🚀 Features
 
 ✅ Add new tasks
 
@@ -36,7 +36,7 @@ Completed
 
 ---
 
-##🛠️ Technologies Used
+## 🛠️ Technologies Used
 
 - **React**
 
@@ -54,7 +54,7 @@ Completed
 
 ---
 
-##📂 Project Structure
+## 📂 Project Structure
 
 src/
 │
@@ -75,30 +75,31 @@ src/
 
 ---
 
-##⚙️ How It Works
-State Management
+## ⚙️ How It Works
 
-Global state is handled using Context API + useReducer
+**State Management**
 
-All todo actions (add, delete, update, complete) are managed inside todosReducer.js
+- Global state is handled using Context API + useReducer
 
-Persistence
+- All todo actions (add, delete, update, complete) are managed inside todosReducer.js
 
-Todos are saved automatically to localStorage
+**Persistence**
 
-On app load, todos are restored from storage
+- Todos are saved automatically to localStorage
 
-Notifications
+- On app load, todos are restored from storage
 
-Snackbars are displayed for:
+**Notifications**
 
-Adding tasks
+- Snackbars are displayed for:
 
-Updating tasks
+  - Adding tasks
 
-Deleting tasks
+  - Updating tasks
 
-Completing tasks
+  - Deleting tasks
+
+  - Completing tasks
 
 ---
 
@@ -113,46 +114,46 @@ npm install
 3️⃣ Run the App
 npm start
 
-The app will run on:
+**The app will run on:**
 
 http://localhost:3000
 
 ---
 
-##📸 Screenshots
+## 📸 Screenshots
 
-Todos:
+### Todos:
 ![Todo App Screenshot](./screenshots/todos.png)
 
-Completed:
+### Completed:
 ![Todo App Screenshot](./screenshots/completed.png)
 
-Delete:
+### Delete:
 ![Todo App Screenshot](./screenshots/delete.png)
 
-Update:
+### Update:
 ![Todo App Screenshot](./screenshots/update.png)
 
-Notifications:
+### Notifications:
 ![Todo App Screenshot](./screenshots/notifications.png)
 
 --- 
 
-##📌 Future Improvements
+## 📌 Future Improvements
 
-Task priority levels
+- Task priority levels
 
-Due dates & reminders
+- Due dates & reminders
 
-Search functionality
+- Search functionality
 
-Dark mode
+- Dark mode
 
-Backend integration (Firebase / REST API)
+- Backend integration (Firebase / REST API)
 
 --- 
 
-##👨‍💻 Author
+## 👨‍💻 Author
 
 Mahmoud Mekkawy
 
@@ -164,6 +165,6 @@ Frontend / React Developer
 
 ---
 
-##📄 License
+## 📄 License
 
 This project is open source and available under the MT License.
