@@ -118,6 +118,18 @@ http://localhost:3000
 Todos:
 ![Todo App Screenshot](./screenshots/todos.png)
 
+Completed:
+![Todo App Screenshot](./screenshots/completed.png)
+
+Delete:
+![Todo App Screenshot](./screenshots/delete.png)
+
+Update:
+![Todo App Screenshot](./screenshots/update.png)
+
+Notifications:
+![Todo App Screenshot](./screenshots/notifications.png)
+
 ... 
 
 📌 Future Improvements
