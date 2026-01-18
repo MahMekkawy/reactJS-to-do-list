@@ -3,7 +3,7 @@
 A modern Todo List application built with React, Material UI, and Context API.
 The app supports full CRUD operations, task filtering, local storage persistence, and real-time notifications using snackbars.
 
-...
+---
 
 🚀 Features
 
@@ -29,7 +29,7 @@ Completed
 
 🎨 Clean UI using Material UI (MUI)
 
-...
+---
 
 🛠️ Technologies Used
 
@@ -47,9 +47,10 @@ UUID
 
 localStorage
 
-...
+---
 
 📂 Project Structure
+
 src/
 │
 ├── components/
@@ -67,7 +68,7 @@ src/
 ├── App.css
 └── index.js
 
-...
+---
 
 ⚙️ How It Works
 State Management
@@ -94,7 +95,7 @@ Deleting tasks
 
 Completing tasks
 
-...
+---
 
 ▶️ Getting Started
 
@@ -111,7 +112,7 @@ The app will run on:
 
 http://localhost:3000
 
-...
+---
 
 📸 Screenshots
 
@@ -130,7 +131,7 @@ Update:
 Notifications:
 ![Todo App Screenshot](./screenshots/notifications.png)
 
-... 
+--- 
 
 📌 Future Improvements
 
@@ -144,7 +145,7 @@ Dark mode
 
 Backend integration (Firebase / REST API)
 
-... 
+--- 
 
 👨‍💻 Author
 
@@ -155,7 +156,7 @@ Frontend / React Developer
 
 🚀 Building modern web applications
 
-...
+---
 
 📄 License
 
