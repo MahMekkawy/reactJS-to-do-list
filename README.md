@@ -1,7 +1,12 @@
-📝 Todo List App (React + MUI)
+#📝 Todo List App (React + MUI)
 
 A modern Todo List application built with React, Material UI, and Context API.
 The app supports full CRUD operations, task filtering, local storage persistence, and real-time notifications using snackbars.
+
+---
+
+## 🚀 Live Demo
+https://react-to-do-list96.netlify.app/
 
 ---
 
@@ -31,25 +36,25 @@ Completed
 
 ---
 
-🛠️ Technologies Used
+##🛠️ Technologies Used
 
-React
+- **React**
 
-React Hooks (useState, useEffect, useReducer, useContext, useMemo)
+- **React** Hooks (useState, useEffect, useReducer, useContext, useMemo)
 
-Context API
+- **Context API**
 
-Material UI (MUI)
+- **Material UI** (MUI)
 
-Notistack (Snackbar)
+- **Notistack** (Snackbar)
 
-UUID
+- **UUID**
 
-localStorage
+- **localStorage**
 
 ---
 
-📂 Project Structure
+##📂 Project Structure
 
 src/
 │
@@ -70,7 +75,7 @@ src/
 
 ---
 
-⚙️ How It Works
+##⚙️ How It Works
 State Management
 
 Global state is handled using Context API + useReducer
@@ -97,7 +102,7 @@ Completing tasks
 
 ---
 
-▶️ Getting Started
+##▶️ Getting Started
 
 1️⃣ Clone the Repository
 git clone https://github.com/your-username/todo-app.git
@@ -114,7 +119,7 @@ http://localhost:3000
 
 ---
 
-📸 Screenshots
+##📸 Screenshots
 
 Todos:
 ![Todo App Screenshot](./screenshots/todos.png)
@@ -133,7 +138,7 @@ Notifications:
 
 --- 
 
-📌 Future Improvements
+##📌 Future Improvements
 
 Task priority levels
 
@@ -147,7 +152,7 @@ Backend integration (Firebase / REST API)
 
 --- 
 
-👨‍💻 Author
+##👨‍💻 Author
 
 Mahmoud Mekkawy
 
@@ -159,6 +164,6 @@ Frontend / React Developer
 
 ---
 
-📄 License
+##📄 License
 
 This project is open source and available under the MT License.
