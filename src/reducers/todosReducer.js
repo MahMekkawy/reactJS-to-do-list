@@ -1,7 +1,7 @@
 // Libraries
 import { v4 as uuidv4 } from "uuid";
 
-export default function s(currentState, action) {
+export default function todosReducer(currentState, action) {
   switch (action.type) {
     case "add": {
       const newTask = {

@@ -87,7 +87,7 @@ export default function TodoList() {
     dispatch({ type: "storage" });
   }, []);
 
-  // Delete Dialog
+  // ====== Delete Dialog ======
   const [handleDeleteDialog, setHandleDeleteDialog] = useState(false);
   const [targetedTodo, settargetedTodo] = useState({});
 
@@ -113,9 +113,9 @@ export default function TodoList() {
     //   severity: "error",
     // });
   }
-  // Delete Dialog
+  // ====== Delete Dialog ======
 
-  // Update Dialog
+  // ====== Update Dialog ======
 
   const [handleUpdateDialog, setHandleUpdateDialog] = useState(false);
 
@@ -141,9 +141,9 @@ export default function TodoList() {
     // });
   }
 
-  // Update Dialog
+  // ====== Update Dialog ======
 
-  // Tasks Filteration
+  // ====== Tasks Filteration ======
   let tasksToDisplay = todos;
 
   const completedTasks = useMemo(() => {
@@ -180,6 +180,8 @@ export default function TodoList() {
       />
     );
   });
+
+  // ====== Tasks Filteration ======
 
   return (
     <>
