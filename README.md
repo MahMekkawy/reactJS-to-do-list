@@ -150,6 +150,7 @@ Backend integration (Firebase / REST API)
 👨‍💻 Author
 
 Mahmoud Mekkawy
+
 Frontend / React Developer
 
 💼 WordPress & React Developer
@@ -160,4 +161,4 @@ Frontend / React Developer
 
 📄 License
 
-This project is open source and available under the MIT License.
+This project is open source and available under the MT License.
