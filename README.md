@@ -1,4 +1,4 @@
-#📝 Todo List App (React + MUI)
+# 📝 Todo List App (React + MUI)
 
 A modern Todo List application built with React, Material UI, and Context API.
 The app supports full CRUD operations, task filtering, local storage persistence, and real-time notifications using snackbars.
