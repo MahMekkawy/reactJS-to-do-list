@@ -1,70 +1,150 @@
-# Getting Started with Create React App
+📝 Todo List App (React + MUI)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern Todo List application built with React, Material UI, and Context API.
+The app supports full CRUD operations, task filtering, local storage persistence, and real-time notifications using snackbars.
 
-## Available Scripts
+...
 
-In the project directory, you can run:
+🚀 Features
 
-### `npm start`
+✅ Add new tasks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✏️ Update task title and details
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+❌ Delete tasks with confirmation dialog
 
-### `npm test`
+🔁 Mark tasks as completed / incomplete
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🔍 Filter tasks:
 
-### `npm run build`
+All
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Not Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Completed
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+💾 Persist data using localStorage
 
-### `npm run eject`
+🔔 Snackbar notifications for all actions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🎨 Clean UI using Material UI (MUI)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+...
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🛠️ Technologies Used
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+React
 
-## Learn More
+React Hooks (useState, useEffect, useReducer, useContext, useMemo)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Context API
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Material UI (MUI)
 
-### Code Splitting
+Notistack (Snackbar)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+UUID
 
-### Analyzing the Bundle Size
+localStorage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+...
 
-### Making a Progressive Web App
+📂 Project Structure
+src/
+│
+├── components/
+│   ├── TodoList.js
+│   ├── Todo.js
+│   └── MySnackBar.js
+│
+├── contexts/
+│   └── TodosContext.js
+│
+├── reducers/
+│   └── todosReducer.js
+│
+├── App.js
+├── App.css
+└── index.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+...
 
-### Advanced Configuration
+⚙️ How It Works
+State Management
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Global state is handled using Context API + useReducer
 
-### Deployment
+All todo actions (add, delete, update, complete) are managed inside todosReducer.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Persistence
 
-### `npm run build` fails to minify
+Todos are saved automatically to localStorage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+On app load, todos are restored from storage
+
+Notifications
+
+Snackbars are displayed for:
+
+Adding tasks
+
+Updating tasks
+
+Deleting tasks
+
+Completing tasks
+
+...
+
+▶️ Getting Started
+
+1️⃣ Clone the Repository
+git clone https://github.com/your-username/todo-app.git
+
+2️⃣ Install Dependencies
+npm install
+
+3️⃣ Run the App
+npm start
+
+The app will run on:
+
+http://localhost:3000
+
+...
+
+📸 Screenshots
+
+Todos:
+![Todo App Screenshot](./screenshots/todos.png)
+
+... 
+
+📌 Future Improvements
+
+Task priority levels
+
+Due dates & reminders
+
+Search functionality
+
+Dark mode
+
+Backend integration (Firebase / REST API)
+
+... 
+
+👨‍💻 Author
+
+Mahmoud Mekkawy
+Frontend / React Developer
+
+💼 WordPress & React Developer
+
+🚀 Building modern web applications
+
+...
+
+📄 License
+
+This project is open source and available under the MIT License.
